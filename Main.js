@@ -2,25 +2,51 @@
 
 const carrosel = $('#carouselExampleControls')
 
-let GalaxyA = [{img:'e-commerce.jpg', price : '3000$', color : 'red', type : 'galaxyA31'},
-{img:'online-1617947180.jpg', price : '1500$', color : 'blue', type : 'galaxyA51'},
-{img:'e-commerce.jpg', price : '2400$', color : 'whit', type : 'galaxyA21'}
+let GalaxyA = [{img:'e-commerce.jpg', price : '500$', color : 'Red', type : 'Galaxy A31'},
+{img:'e-commerce.jpg', price : '500$', color : 'Blue', type : 'Galaxy A31'},
+{img:'e-commerce.jpg', price : '500$', color : 'White', type : 'Galaxy A31'},
+{img:'online-1617947180.jpg', price : '700$', color : 'Blue', type : 'Galaxy A51'},
+{img:'online-1617947180.jpg', price : '700$', color : 'Red', type : 'Galaxy A51'},
+{img:'online-1617947180.jpg', price : '700$', color : 'White', type : 'Galaxy A51'},
+{img:'e-commerce.jpg', price : '400$', color : 'White', type : 'Galaxy A21'},
+{img:'e-commerce.jpg', price : '400$', color : 'Red', type : 'Galaxy A21'},
+{img:'e-commerce.jpg', price : '2400$', color : 'Blue', type : 'Galaxy A21'}
 ]
-
-let GalaxyS = [{img:'e-commerce.jpg', price : '1000$', color : 'red', type : 'galaxyb31'},
-{img:'online-1617947180.jpg', price : '1800$', color : 'blue', type : 'galaxyb51'},
-{img:'e-commerce.jpg', price : '240$', color : 'white', type : 'galaxyb21'}
+let GalaxyS = [{img:'e-commerce.jpg', price : '1500$', color : 'Red', type : 'Galaxy S10'},
+{img:'e-commerce.jpg', price : '1500$', color : 'White', type : 'Galaxy S10'},
+{img:'e-commerce.jpg', price : '1500$', color : 'Blue', type : 'Galaxy S10'},
+{img:'online-1617947180.jpg', price : '1600$', color : 'Blue', type : 'Galaxy S20'},
+{img:'online-1617947180.jpg', price : '1600$', color : 'White', type : 'Galaxy S20'},
+{img:'online-1617947180.jpg', price : '1600$', color : 'Red', type : 'Galaxy S20'},
+{img:'e-commerce.jpg', price : '1800$', color : 'White', type : 'Galaxy S21'},
+{img:'e-commerce.jpg', price : '1800$', color : 'Blue', type : 'Galaxy S21'},
+{img:'e-commerce.jpg', price : '1800$', color : 'Red', type : 'Galaxy S21'}
 ]
-
-let GalaxyFold = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'},
-{img:'online-1617947180.jpg', price : '1350$', color : 'blue', type : 'galaxyc51'},
-{img:'e-commerce.jpg', price : '650$', color : 'whit', type : 'galaxyc21'}
+let GalaxyFold = [{img:'e-commerce.jpg', price : '1800$', color : 'Red', type : 'Galaxy Fold'},
+{img:'e-commerce.jpg', price : '1800$', color : 'White', type : 'Galaxy Fold'},
+{img:'e-commerce.jpg', price : '1800$', color : 'Blue', type : 'Galaxy Fold'},
+{img:'online-1617947180.jpg', price : '1950$', color : 'Blue', type : 'Galaxy Fold 2'},
+{img:'online-1617947180.jpg', price : '1950$', color : 'Red', type : 'Galaxy Fold 2'},
+{img:'online-1617947180.jpg', price : '1950$', color : 'White', type : 'Galaxy Fold 2'},
+{img:'e-commerce.jpg', price : '2000$', color : 'White', type : 'Galaxy Z Flip'},
+{img:'e-commerce.jpg', price : '2000$', color : 'Red', type : 'Galaxy Z Flip'},
+{img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Z Flip'}
 ]
-
-
-let GalaxyTabA = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'}]
-
-let GalaxyTabS = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'}]
+let GalaxyTabA = [{img:'e-commerce.jpg', price : '1200$', color : 'Red', type : 'Galaxy Tab A7 LTE'},
+{img:'e-commerce.jpg', price : '1200$', color : 'Blue', type : 'Galaxy Tab A7 LTE'},
+{img:'e-commerce.jpg', price : '1200$', color : 'White', type : 'Galaxy Tab A7 LTE'},
+{img:'e-commerce.jpg', price : '1250$', color : 'Red', type : 'Galaxy Tab A7 Lite'},
+{img:'e-commerce.jpg', price : '1250$', color : 'Blue', type : 'Galaxy Tab A7 Lite'},
+{img:'e-commerce.jpg', price : '1250$', color : 'White', type : 'Galaxy Tab A7 Lite'},
+{img:'e-commerce.jpg', price : '1300$', color : 'Red', type : 'Galaxy Tab A2019 LTE'},
+{img:'e-commerce.jpg', price : '1300$', color : 'Blue', type : 'Galaxy Tab A2019 LTE'},
+{img:'e-commerce.jpg', price : '1300$', color : 'White', type : 'Galaxy Tab A2019 LTE'},
+{img:'e-commerce.jpg', price : '1350$', color : 'Red', type : 'Galaxy Tab Active3 LTE'}]
+let GalaxyTabS = [{img:'e-commerce.jpg', price : '1900$', color : 'Blue', type : 'Galaxy Tab S7 FE LTE'},
+{img:'e-commerce.jpg', price : '1950$', color : 'White', type : 'Galaxy Tab S7+'},
+{img:'e-commerce.jpg', price : '1950$', color : 'Red', type : 'Galaxy Tab S7+'},
+{img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7 LTE'},
+{img:'e-commerce.jpg', price : '1400$', color : 'White', type : 'Galaxy Tab S6  Lite'}]
 
 
 let countA = 0
@@ -62,7 +88,7 @@ $('#A').click(function(){
     $('#GalaxyCC').hide()
     $('#GalaxyTabSS').hide()
     $('#GalaxyTabAA').hide()
-    $('#fileredd').hide()
+    $('#filteredd').hide()
     $('#GalaxyAA').show()
     carrosel.hide()
 })
@@ -81,7 +107,7 @@ $('#B').click(function(){
     $('#GalaxyCC').hide()
     $('#GalaxyTabSS').hide()
     $('#GalaxyTabAA').hide()
-    $('#fileredd').hide()
+    $('#filteredd').hide()
     $('#GalaxyBB').show()
     carrosel.hide()
 })
@@ -100,7 +126,7 @@ $('#C').click(function(){
     $('#GalaxyBB').hide()
     $('#GalaxyTabSS').hide()
     $('#GalaxyTabAA').hide()
-    $('#fileredd').hide()
+    $('#filteredd').hide()
     $('#GalaxyCC').show()
     carrosel.hide()
 })
@@ -120,7 +146,7 @@ $('#D').click(function(){
   $('#GalaxyCC').hide()
   $('#GalaxyTabSS').hide()
   $('#GalaxyAA').hide()
-  $('#fileredd').hide()
+  $('#filteredd').hide()
   $('#GalaxyTabAA').show()
   carrosel.hide()
 })
@@ -141,7 +167,7 @@ $('#E').click(function(){
   $('#GalaxyCC').hide()
   $('#GalaxyTabSS').show()
   $('#GalaxyTabAA').hide()
-  $('#fileredd').hide()
+  $('#filteredd').hide()
   $('#GalaxyAA').hide()
   carrosel.hide()
 })
@@ -162,8 +188,9 @@ let arrayFiltered = function(){
   
   if(document.getElementById('SmartPhones').checked){
      category = allPhones
-      $('#phone').removeClass('hide')
+     console.log('heee')
       if(document.getElementById('GalaxyA').checked){
+        console.log('heee')
         category = GalaxyA
      }
    
@@ -177,7 +204,7 @@ let arrayFiltered = function(){
   }
   else if(document.getElementById('Tablets').checked){
        category = allTab
-      $('#Tab').removeClass('hide')
+      
       if(document.getElementById('GalaxyTabA').checked){
         category = GalaxyTabA
        }
@@ -192,13 +219,13 @@ let arrayFiltered = function(){
   
 
   if(document.getElementById('red').checked) {
-    selectedValue = 'red' 
+    selectedValue = 'Red' 
   }
   else if(document.getElementById('blue').checked) {
-    selectedValue = 'blue'
+    selectedValue = 'Blue'
   }
   else if(document.getElementById('white').checked) { 
-    selectedValue = 'white' 
+    selectedValue = 'White' 
   }
 
 
@@ -229,18 +256,18 @@ let arrayFiltered = function(){
 $('#FILTER').click(function(){
   let arr = arrayFiltered()
   console.log(arr)
-  $('#filtered').html('')
+  $('#filteredd').html('')
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
       $('#filteredd')[0].appendChild(div[0])
     }
   
-  $('#GalaxyB').hide()
-  $('#GalaxyC').hide()
+  $('#GalaxyBB').hide()
+  $('#GalaxyCC').hide()
   $('#GalaxyTabS').hide()
   $('#GalaxyTabA').hide()
-  $('#filered').show()
-  $('#GalaxyA').hide()
+  $('#filteredd').show()
+  $('#GalaxyAA').hide()
   carrosel.hide()
 })
 
