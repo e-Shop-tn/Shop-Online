@@ -1,5 +1,45 @@
 
-
 .hide{
     display: none;
+}
+.offcanvas-start {
+    width: 250px !important;
+}
+.btn-light {
+    font-weight:bold !important;
+    font-family: sans-serif !important;
+}
+.offcanvas-title{
+    font-weight: bold !important;
+    font-family: sans-serif !important;
+}
+#color{
+    margin-left: 10px !important;
+    font-weight:bold !important;
+    font-family: sans-serif !important;
+}
+#category{
+    font-weight:bold !important;
+    font-family: sans-serif !important;
+}
+#price{
+    margin-left: 10px !important;
+    font-weight:bold !important;
+    font-family: sans-serif !important;
+}
+#model{
+    font-weight:bold !important;
+    font-family: sans-serif !important;
+}
+.form-check-label{
+    
+    font-weight: normal !important;
+    font-family: sans-serif !important;
+}
+.form-check{
+    margin-left: 10px !important;
+}
+video{
+    object-position: center !important;
+    height: fit-content !important;
 }
