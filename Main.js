@@ -53,16 +53,17 @@ $('#A').click(function(){
     if(countA !== arr.length){
       for(var i=0; i< arr.length; i++ ){
         var div = addCard(arr[i])
-        $('#GalaxyA')[0].appendChild(div[0])
+        $('#GalaxyAA')[0].appendChild(div[0])
         countA++
       }
     }
-    $('#GalaxyB').hide()
-    $('#GalaxyC').hide()
-    $('#GalaxyTabS').hide()
-    $('#GalaxyTabA').hide()
-    $('#filered').hide()
-    $('#GalaxyA').show()
+    console.log($('#GalaxyAA'))
+    $('#GalaxyBB').hide()
+    $('#GalaxyCC').hide()
+    $('#GalaxyTabSS').hide()
+    $('#GalaxyTabAA').hide()
+    $('#fileredd').hide()
+    $('#GalaxyAA').show()
     carrosel.hide()
 })
 
@@ -72,16 +73,16 @@ $('#B').click(function(){
     if(countB !== arr.length){
         for(var i=0; i< arr.length; i++ ){
           var div = addCard(arr[i])
-          $('#GalaxyB')[0].appendChild(div[0])
+          $('#GalaxyBB')[0].appendChild(div[0])
           countB++
         }
     }       
-    $('#GalaxyA').hide()
-    $('#GalaxyC').hide()
-    $('#GalaxyTabS').hide()
-    $('#GalaxyTabA').hide()
-    $('#filered').hide()
-    $('#GalaxyB').show()
+    $('#GalaxyAA').hide()
+    $('#GalaxyCC').hide()
+    $('#GalaxyTabSS').hide()
+    $('#GalaxyTabAA').hide()
+    $('#fileredd').hide()
+    $('#GalaxyBB').show()
     carrosel.hide()
 })
 
@@ -91,16 +92,16 @@ $('#C').click(function(){
     if(countC !== arr.length){
         for(var i=0; i< arr.length; i++ ){
           var div = addCard(arr[i])
-          $('#GalaxyC')[0].appendChild(div[0])
+          $('#GalaxyCC')[0].appendChild(div[0])
           countC++
         }
     }      
-    $('#GalaxyA').hide()
-    $('#GalaxyB').hide()
-    $('#GalaxyTabS').hide()
-    $('#GalaxyTabA').hide()
-    $('#filered').hide()
-    $('#GalaxyC').show()
+    $('#GalaxyAA').hide()
+    $('#GalaxyBB').hide()
+    $('#GalaxyTabSS').hide()
+    $('#GalaxyTabAA').hide()
+    $('#fileredd').hide()
+    $('#GalaxyCC').show()
     carrosel.hide()
 })
 
@@ -111,16 +112,16 @@ $('#D').click(function(){
   if(countD !== arr.length){
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
-      $('#GalaxyTavA')[0].appendChild(div[0])
+      $('#GalaxyTabAA')[0].appendChild(div[0])
       countD++
     }
   }
-  $('#GalaxyB').hide()
-  $('#GalaxyC').hide()
-  $('#GalaxyTabS').hide()
-  $('#GalaxyA').hide()
-  $('#filered').hide()
-  $('#GalaxyTabA').show()
+  $('#GalaxyBB').hide()
+  $('#GalaxyCC').hide()
+  $('#GalaxyTabSS').hide()
+  $('#GalaxyAA').hide()
+  $('#fileredd').hide()
+  $('#GalaxyTabAA').show()
   carrosel.hide()
 })
 
@@ -132,16 +133,16 @@ $('#E').click(function(){
   if(countE !== arr.length){
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
-      $('#GalaxyTabS')[0].appendChild(div[0])
+      $('#GalaxyTabSS')[0].appendChild(div[0])
       countE++
     }
   }
-  $('#GalaxyB').hide()
-  $('#GalaxyC').hide()
-  $('#GalaxyTabS').show()
-  $('#GalaxyTabA').hide()
-  $('#filered').hide()
-  $('#GalaxyA').hide()
+  $('#GalaxyBB').hide()
+  $('#GalaxyCC').hide()
+  $('#GalaxyTabSS').show()
+  $('#GalaxyTabAA').hide()
+  $('#fileredd').hide()
+  $('#GalaxyAA').hide()
   carrosel.hide()
 })
 
@@ -231,7 +232,7 @@ $('#FILTER').click(function(){
   $('#filtered').html('')
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
-      $('#filtered')[0].appendChild(div[0])
+      $('#filteredd')[0].appendChild(div[0])
     }
   
   $('#GalaxyB').hide()
