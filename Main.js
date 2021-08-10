@@ -1,7 +1,7 @@
 
 
-const carrosel = $('#carouselExampleControls')
-carrosel.hide()
+// const carrosel = $('#carouselExampleControls')
+// carrosel.hide()
 let GalaxyA = [{img:'e-commerce.jpg', price : '3000$', color : 'red', type : 'galaxyA31'},
 {img:'online-1617947180.jpg', price : '1500$', color : 'blue', type : 'galaxyA51'},
 {img:'e-commerce.jpg', price : '2400$', color : 'whit', type : 'galaxyA21'}
