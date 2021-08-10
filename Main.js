@@ -85,6 +85,28 @@ $('#C').click(function(){
 
 
 
+let arrayFiltered = function(){
+  var allPhones = [...GalaxyA,...GalaxyB,...GalaxyC]
+  var selectedValue
+  var filterArray
+  if(document.getElementById('red').checked) {
+    selectedValue = 'red' 
+  }
+  else if(document.getElementById('blue').checked) {
+    selectedValue = 'blue'
+  }
+  else if(document.getElementById('white').checked) { 
+    selectedValue = 'white' 
+  }
+  if(selectedValue){
+      var arrayColor =  allPhones.filter(phone => phone.color === selectedValue)
+      filterArray = arrayColor
+  }
+  return arrayColor
+}
+
+
+
 
 
 
