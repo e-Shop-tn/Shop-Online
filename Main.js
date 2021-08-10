@@ -18,14 +18,16 @@ let GalaxyFold = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type 
 ]
 
 
-let GalaxyTabA = []
+let GalaxyTabA = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'}]
 
-let GalaxyTabS = []
+let GalaxyTabS = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'}]
 
 
 let countA = 0
 let countB = 0
 let countC = 0
+let countD = 0
+let countE = 0
 
 
 let addCard = function(obj){
@@ -47,6 +49,7 @@ let addCard = function(obj){
 
 $('#A').click(function(){
     let arr = GalaxyA
+    console.log('hee')
     if(countA !== arr.length){
       for(var i=0; i< arr.length; i++ ){
         var div = addCard(arr[i])
@@ -56,6 +59,9 @@ $('#A').click(function(){
     }
     $('#GalaxyB').hide()
     $('#GalaxyC').hide()
+    $('#GalaxyTabS').hide()
+    $('#GalaxyTabA').hide()
+    $('#filered').hide()
     $('#GalaxyA').show()
     carrosel.hide()
 })
@@ -72,6 +78,9 @@ $('#B').click(function(){
     }       
     $('#GalaxyA').hide()
     $('#GalaxyC').hide()
+    $('#GalaxyTabS').hide()
+    $('#GalaxyTabA').hide()
+    $('#filered').hide()
     $('#GalaxyB').show()
     carrosel.hide()
 })
@@ -88,19 +97,64 @@ $('#C').click(function(){
     }      
     $('#GalaxyA').hide()
     $('#GalaxyB').hide()
+    $('#GalaxyTabS').hide()
+    $('#GalaxyTabA').hide()
+    $('#filered').hide()
     $('#GalaxyC').show()
     carrosel.hide()
 })
 
 
+$('#D').click(function(){
+  let arr = GalaxyTabA
+ 
+  if(countD !== arr.length){
+    for(var i=0; i< arr.length; i++ ){
+      var div = addCard(arr[i])
+      $('#GalaxyTavA')[0].appendChild(div[0])
+      countD++
+    }
+  }
+  $('#GalaxyB').hide()
+  $('#GalaxyC').hide()
+  $('#GalaxyTabS').hide()
+  $('#GalaxyA').hide()
+  $('#filered').hide()
+  $('#GalaxyTabA').show()
+  carrosel.hide()
+})
+
+
+
+$('#E').click(function(){
+  let arr = GalaxyA
+  
+  if(countE !== arr.length){
+    for(var i=0; i< arr.length; i++ ){
+      var div = addCard(arr[i])
+      $('#GalaxyTabS')[0].appendChild(div[0])
+      countE++
+    }
+  }
+  $('#GalaxyB').hide()
+  $('#GalaxyC').hide()
+  $('#GalaxyTabS').show()
+  $('#GalaxyTabA').hide()
+  $('#filered').hide()
+  $('#GalaxyA').hide()
+  carrosel.hide()
+})
+
+
 
 let arrayFiltered = function(){
-  var allPhones = [...GalaxyA,...GalaxyB,...GalaxyC]
+  var allPhones = [...GalaxyA,...GalaxyS,...GalaxyFold]
   var allTab= [...GalaxyTabA,...GalaxyTabS]
   var all = [...allPhones, ...allTab]
   var selectedValue
   var filterArray
   var category
+  var arrayColor
  
   
   if(document.getElementById('SmartPhones').checked){
@@ -148,13 +202,55 @@ let arrayFiltered = function(){
 
 
   if(selectedValue){      
-    let arrayColor = all.filter(phone => phone.color === selectedValue)
+     arrayColor = category.filter(phone => phone.color === selectedValue)
+     
   }
   else{
-    let arrayColor = all 
+     arrayColor = category 
   }
 
+
+
+  return arrayColor
+
 }
+
+
+
+$('#FILTER').click(function(){
+  let arr = arrayFiltered()
+  $('#filtered').html('')
+    for(var i=0; i< arr.length; i++ ){
+      var div = addCard(arr[i])
+      $('#filtered')[0].appendChild(div[0])
+    }
+  
+  $('#GalaxyB').hide()
+  $('#GalaxyC').hide()
+  $('#GalaxyTabS').hide()
+  $('#GalaxyTabA').hide()
+  $('#filered').show()
+  $('#GalaxyA').hide()
+  carrosel.hide()
+})
+
+
+  
+
+
+$('#SmartPhones').click(function(){
+  $('#phone').removeClass('hide')
+  $('#tab').addClass('hide')
+})
+
+$('#Tablets').click(function(){
+  
+  $('#tab').removeClass('hide')
+  $('#phone').addClass('hide')
+})
+
+
+
 
 
 
