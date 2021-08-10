@@ -155,7 +155,9 @@ let arrayFiltered = function(){
   var filterArray
   var category
   var arrayColor
- 
+  var max = $('#max').val() || 10000
+  var min = $('#min').val()
+
   
   if(document.getElementById('SmartPhones').checked){
      category = allPhones
@@ -210,8 +212,14 @@ let arrayFiltered = function(){
   }
 
 
+  
 
-  return arrayColor
+
+
+  return arrayColor.filter(function(phone,i){
+    let price = phone.price.replace(/[^0-9]/g,'')
+    return price >= min && price <= max
+  })
 
 }
 
@@ -219,6 +227,7 @@ let arrayFiltered = function(){
 
 $('#FILTER').click(function(){
   let arr = arrayFiltered()
+  console.log(arr)
   $('#filtered').html('')
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
