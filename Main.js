@@ -1,21 +1,26 @@
 
 
 const carrosel = $('#carouselExampleControls')
-carrosel.hide()
+// 
 let GalaxyA = [{img:'e-commerce.jpg', price : '3000$', color : 'red', type : 'galaxyA31'},
 {img:'online-1617947180.jpg', price : '1500$', color : 'blue', type : 'galaxyA51'},
 {img:'e-commerce.jpg', price : '2400$', color : 'whit', type : 'galaxyA21'}
 ]
 
-let GalaxyB = [{img:'e-commerce.jpg', price : '1000$', color : 'red', type : 'galaxyb31'},
+let GalaxyS = [{img:'e-commerce.jpg', price : '1000$', color : 'red', type : 'galaxyb31'},
 {img:'online-1617947180.jpg', price : '1800$', color : 'blue', type : 'galaxyb51'},
 {img:'e-commerce.jpg', price : '240$', color : 'white', type : 'galaxyb21'}
 ]
 
-let GalaxyC = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'},
+let GalaxyFold = [{img:'e-commerce.jpg', price : '1200$', color : 'green', type : 'galaxyc31'},
 {img:'online-1617947180.jpg', price : '1350$', color : 'blue', type : 'galaxyc51'},
 {img:'e-commerce.jpg', price : '650$', color : 'whit', type : 'galaxyc21'}
 ]
+
+
+let GalaxyTabA = []
+
+let GalaxyTabS = []
 
 
 let countA = 0
@@ -52,11 +57,12 @@ $('#A').click(function(){
     $('#GalaxyB').hide()
     $('#GalaxyC').hide()
     $('#GalaxyA').show()
+    carrosel.hide()
 })
 
 
 $('#B').click(function(){
-    let arr = GalaxyB
+    let arr = GalaxyS
     if(countB !== arr.length){
         for(var i=0; i< arr.length; i++ ){
           var div = addCard(arr[i])
@@ -67,11 +73,12 @@ $('#B').click(function(){
     $('#GalaxyA').hide()
     $('#GalaxyC').hide()
     $('#GalaxyB').show()
+    carrosel.hide()
 })
 
 
 $('#C').click(function(){
-    let arr = GalaxyC
+    let arr = GalaxyFold
     if(countC !== arr.length){
         for(var i=0; i< arr.length; i++ ){
           var div = addCard(arr[i])
@@ -82,14 +89,51 @@ $('#C').click(function(){
     $('#GalaxyA').hide()
     $('#GalaxyB').hide()
     $('#GalaxyC').show()
+    carrosel.hide()
 })
 
 
 
 let arrayFiltered = function(){
   var allPhones = [...GalaxyA,...GalaxyB,...GalaxyC]
+  var allTab= [...GalaxyTabA,...GalaxyTabS]
+  var all = [...allPhones, ...allTab]
   var selectedValue
   var filterArray
+  var category
+ 
+  
+  if(document.getElementById('SmartPhones').checked){
+     category = allPhones
+      $('#phone').removeClass('hide')
+      if(document.getElementById('GalaxyA').checked){
+        category = GalaxyA
+     }
+   
+     else if(document.getElementById('GalaxyB').checked){
+        category = GalaxyS
+     }
+     else if(document.getElementById('GalaxyFold').checked){
+        category = GalaxyFold
+     }
+
+  }
+  else if(document.getElementById('Tablets').checked){
+       category = allTab
+      $('#Tab').removeClass('hide')
+      if(document.getElementById('GalaxyTabA').checked){
+        category = GalaxyTabA
+       }
+     else if(document.getElementById('GalaxyTabS').checked){
+        category = GalaxyATabS
+       }
+  }
+  else{
+     category = all
+  }
+
+  
+
   if(document.getElementById('red').checked) {
     selectedValue = 'red' 
   }
@@ -99,11 +143,17 @@ let arrayFiltered = function(){
   else if(document.getElementById('white').checked) { 
     selectedValue = 'white' 
   }
-  if(selectedValue){
-      var arrayColor =  allPhones.filter(phone => phone.color === selectedValue)
-      filterArray = arrayColor
+
+
+
+
+  if(selectedValue){      
+    let arrayColor = all.filter(phone => phone.color === selectedValue)
   }
-  return arrayColor
+  else{
+    let arrayColor = all 
+  }
+
 }
 
 
