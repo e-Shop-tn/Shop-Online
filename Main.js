@@ -1,4 +1,5 @@
 
+
 const carrosel = $('#carouselExampleControls')
 carrosel.hide()
 let GalaxyA = [{img:'e-commerce.jpg', price : '3000$', color : 'red', type : 'galaxyA31'},
