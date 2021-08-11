@@ -2,29 +2,29 @@
 
 const carrosel = $('#carouselExampleControls')
 
-let GalaxyA = [{img:'e-commerce.jpg', price : '500$', color : 'Red', type : 'Galaxy A31'},
-{img:'e-commerce.jpg', price : '500$', color : 'Blue', type : 'Galaxy A31'},
-{img:'e-commerce.jpg', price : '500$', color : 'White', type : 'Galaxy A31'},
-{img:'online-1617947180.jpg', price : '700$', color : 'Blue', type : 'Galaxy A51'},
-{img:'online-1617947180.jpg', price : '700$', color : 'Red', type : 'Galaxy A51'},
-{img:'online-1617947180.jpg', price : '700$', color : 'White', type : 'Galaxy A51'},
-{img:'e-commerce.jpg', price : '400$', color : 'White', type : 'Galaxy A21'},
-{img:'e-commerce.jpg', price : '400$', color : 'Red', type : 'Galaxy A21'},
-{img:'e-commerce.jpg', price : '2400$', color : 'Blue', type : 'Galaxy A21'}
+let GalaxyA = [{img:'A31r.jpg', price : '500$', color : 'Red', type : 'Galaxy A31'},
+{img:'A31b.jpg', price : '500$', color : 'Blue', type : 'Galaxy A31'},
+{img:'A31w.jpg', price : '500$', color : 'White', type : 'Galaxy A31'},
+{img:'A51b.jpg', price : '700$', color : 'Blue', type : 'Galaxy A51'},
+{img:'A51r.jpg', price : '700$', color : 'Red', type : 'Galaxy A51'},
+{img:'A51w.jpg', price : '700$', color : 'White', type : 'Galaxy A51'},
+{img:'A21w.jpg', price : '400$', color : 'White', type : 'Galaxy A21'},
+{img:'A21r.jpg', price : '400$', color : 'Red', type : 'Galaxy A21'},
+{img:'A21b.jpg', price : '2400$', color : 'Blue', type : 'Galaxy A21'}
 ]
-let GalaxyS = [{img:'e-commerce.jpg', price : '1500$', color : 'Red', type : 'Galaxy S10'},
-{img:'e-commerce.jpg', price : '1500$', color : 'White', type : 'Galaxy S10'},
-{img:'e-commerce.jpg', price : '1500$', color : 'Blue', type : 'Galaxy S10'},
-{img:'online-1617947180.jpg', price : '1600$', color : 'Blue', type : 'Galaxy S20'},
-{img:'online-1617947180.jpg', price : '1600$', color : 'White', type : 'Galaxy S20'},
-{img:'online-1617947180.jpg', price : '1600$', color : 'Red', type : 'Galaxy S20'},
-{img:'e-commerce.jpg', price : '1800$', color : 'White', type : 'Galaxy S21'},
-{img:'e-commerce.jpg', price : '1800$', color : 'Blue', type : 'Galaxy S21'},
-{img:'e-commerce.jpg', price : '1800$', color : 'Red', type : 'Galaxy S21'}
+let GalaxyS = [{img:'S10r.jpg', price : '1500$', color : 'Red', type : 'Galaxy S10'},
+{img:'S10w', price : '1500$', color : 'White', type : 'Galaxy S10'},
+{img:'S10b.jpg', price : '1500$', color : 'Blue', type : 'Galaxy S10'},
+{img:'S20b.jpg', price : '1600$', color : 'Blue', type : 'Galaxy S20'},
+{img:'S20w', price : '1600$', color : 'White', type : 'Galaxy S20'},
+{img:'S20r.jpg', price : '1600$', color : 'Red', type : 'Galaxy S20'},
+{img:'S21w.jpg', price : '1800$', color : 'White', type : 'Galaxy S21'},
+{img:'S21b.jpg', price : '1800$', color : 'Blue', type : 'Galaxy S21'},
+{img:'S21r.webp.jpg', price : '1800$', color : 'Red', type : 'Galaxy S21'}
 ]
-let GalaxyFold = [{img:'e-commerce.jpg', price : '1800$', color : 'Red', type : 'Galaxy Fold'},
-{img:'e-commerce.jpg', price : '1800$', color : 'White', type : 'Galaxy Fold'},
-{img:'e-commerce.jpg', price : '1800$', color : 'Blue', type : 'Galaxy Fold'},
+let GalaxyFold = [{img:'Fr.jpg', price : '1800$', color : 'Red', type : 'Galaxy Fold'},
+{img:'Fw.jpg', price : '1800$', color : 'White', type : 'Galaxy Fold'},
+{img:'Fb.jpg', price : '1800$', color : 'Blue', type : 'Galaxy Fold'},
 {img:'online-1617947180.jpg', price : '1950$', color : 'Blue', type : 'Galaxy Fold 2'},
 {img:'online-1617947180.jpg', price : '1950$', color : 'Red', type : 'Galaxy Fold 2'},
 {img:'online-1617947180.jpg', price : '1950$', color : 'White', type : 'Galaxy Fold 2'},
@@ -45,7 +45,7 @@ let GalaxyTabA = [{img:'e-commerce.jpg', price : '1200$', color : 'Red', type : 
 let GalaxyTabS = [{img:'e-commerce.jpg', price : '1900$', color : 'Blue', type : 'Galaxy Tab S7 FE LTE'},
 {img:'e-commerce.jpg', price : '1950$', color : 'White', type : 'Galaxy Tab S7+'},
 {img:'e-commerce.jpg', price : '1950$', color : 'Red', type : 'Galaxy Tab S7+'},
-{img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7 LTE'},
+{img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7+ LTE'},
 {img:'e-commerce.jpg', price : '1400$', color : 'White', type : 'Galaxy Tab S6  Lite'}]
 
 

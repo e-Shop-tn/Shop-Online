@@ -32,7 +32,6 @@
     font-family: sans-serif !important;
 }
 .form-check-label{
-    
     font-weight: normal !important;
     font-family: sans-serif !important;
 }
@@ -43,3 +42,12 @@ video{
     object-position: center !important;
     height: fit-content !important;
 }
+.card0{
+    background-color: black !important;
+    margin:20px !important;
+    color: white !important;
+}
+#filteredd{
+    margin:10px !important;
+}
+
