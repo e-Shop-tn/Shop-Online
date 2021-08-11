@@ -50,6 +50,8 @@ let GalaxyTabS = [{img:'S7fe.jpg', price : '1900$', color : 'Blue', type : 'Gala
 
 let products =  [...GalaxyA,...GalaxyS,...GalaxyFold, ...GalaxyTabA, ...GalaxyTabS]
 let busquet = []
+let min = $('#min').val()
+let max = $('#max').val() || 10000
 
 
 let countA = 0
@@ -68,7 +70,7 @@ let addCard = function(obj){
     buttondiv = $('<div class="d-grid gap-2"></div>')
     button = $('<button class="btn btn-primary busquet" type="button"  id="'+ products.indexOf(obj) + '">AddToBusquet</button>')
     buttondiv[0].appendChild(button[0])
-  
+ 
     cardBody[0].appendChild(type[0])
     cardBody[0].appendChild(color[0])
     cardBody[0].appendChild(price[0])
@@ -93,7 +95,7 @@ let listener = function(){
 
 $('#A').click(function(){
     let arr = GalaxyA
-    console.log('hee')
+    
     if(countA !== arr.length){
       for(var i=0; i< arr.length; i++ ){
         var div = addCard(arr[i])
@@ -102,7 +104,7 @@ $('#A').click(function(){
       }
     }
     listener()
-    console.log($('#GalaxyAA'))
+   
     $('#GalaxyBB').hide()
     $('#GalaxyCC').hide()
     $('#GalaxyTabSS').hide()
@@ -176,7 +178,7 @@ $('#D').click(function(){
 
 
 $('#E').click(function(){
-  let arr = GalaxyA
+  let arr = GalaxyTabS
   
   if(countE !== arr.length){
     for(var i=0; i< arr.length; i++ ){
@@ -211,9 +213,9 @@ let arrayFiltered = function(){
   
   if(document.getElementById('SmartPhones').checked){
      category = allPhones
-     console.log('heee')
+     
       if(document.getElementById('GalaxyA').checked){
-        console.log('heee')
+        
         category = GalaxyA
      }
    
@@ -269,6 +271,7 @@ let arrayFiltered = function(){
 
   return arrayColor.filter(function(phone,i){
     let price = phone.price.replace(/[^0-9]/g,'')
+    console.log(price)
     return price >= min && price <= max
   })
 
@@ -278,7 +281,7 @@ let arrayFiltered = function(){
 
 $('#FILTER').click(function(){
   let arr = arrayFiltered()
-  console.log(arr)
+  
   $('#filteredd').html('')
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
@@ -288,8 +291,8 @@ $('#FILTER').click(function(){
   
   $('#GalaxyBB').hide()
   $('#GalaxyCC').hide()
-  $('#GalaxyTabS').hide()
-  $('#GalaxyTabA').hide()
+  $('#GalaxyTabSS').hide()
+  $('#GalaxyTabAA').hide()
   $('#filteredd').show()
   $('#GalaxyAA').hide()
   carrosel.hide()
@@ -311,20 +314,31 @@ $('#Tablets').click(function(){
 })
 
 
-
 $('#basket').click(function(){
-  var div = $('<div></div>')
-  var total = 0
-  for(var i = 0; i<busquet.length;i++ ){
-    var p = $('<p>Type: ' + busquet[i].type + '     ' + 'price: ' + busquet[i].price )
-    total += busquet[i].price 
-    div[0].appendChild(p[0])
-  }
-  div[0].appendChild('<p>Total:' + total + '</p>')
-  div[0].appendChild('<button>confirm</button>')
-  $('#Menu').hide()
+  if(busquet.length !== 0){
 
+    var div = $('<div class="container-fluid di"></div>')
+
+  var total = 0
+  for(var i=0; i<busquet.length;i++){
+    var p = $('<p>Type: ' + busquet[i].type + '     price:' + busquet[i].price + '</p>')
+    div[0].appendChild(p[0])
+    total += 1
+  }
+  var but = $('<button class="btn">confirm</button>')
+  var tot = $('<p>Total: ' + total + ' .</p>')
+  div[0].appendChild(tot[0])
+  div[0].appendChild(but[0])
+
+  $('#bought')[0].appendChild(div[0])
+  $('#bought').removeClass('hide')
+  $('#phoneList').hide()
+  }
 })
+
+
+
+
 
 
 

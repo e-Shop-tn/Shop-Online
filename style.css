@@ -18,10 +18,10 @@
     font-weight:bold !important;
     font-family: sans-serif !important;
 }
-#category{
+/* #category{
     font-weight:bold !important;
-    font-family: sans-serif !important;
-}
+    font-family: sans-serif !important; */
+/* } */
 #price{
     margin-left: 10px !important;
     font-weight:bold !important;
@@ -58,3 +58,12 @@ video{
     border-color: white !important;
 }
 
+
+#bought{
+    position: relative;
+    top:20px
+}
+
+.di{
+    background-color: antiquewhite;
+}
