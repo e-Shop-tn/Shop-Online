@@ -316,7 +316,9 @@ $('#Tablets').click(function(){
 
 $('#basket').click(function(){
   if(busquet.length !== 0){
+
     var div = $('<div class="container-fluid di"></div>')
+
   var total = 0
   for(var i=0; i<busquet.length;i++){
     var p = $('<p>Type: ' + busquet[i].type + '     price:' + busquet[i].price + '</p>')
