@@ -67,3 +67,15 @@ video{
 .di{
     background-color: antiquewhite;
 }
+.card-img-top{
+height: 100%;
+}
+#refresh{
+    border-color: white !important;
+        background-color: Transparent !important;
+        background-repeat:no-repeat !important;
+        border: none !important;
+        cursor:pointer !important;
+        overflow: hidden !important;
+        outline:none !important;
+}
