@@ -73,7 +73,7 @@ let addCard = function(obj){
     cardBody[0].appendChild(color[0])
     cardBody[0].appendChild(price[0])
     cardBody[0].appendChild(buttondiv[0])
-    let img = $('<img src="img/' + obj.img  + '" class="card-img-top" alt="...">')
+    let img = $('<img src="img/' + obj.img  + '" class="card-img-top" alt="..." >')
     let container = $('<div class="card card0" style="width: 18rem;"></div>')
     container[0].appendChild(img[0])
     container[0].appendChild(cardBody[0])
