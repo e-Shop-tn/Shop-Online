@@ -13,40 +13,40 @@ let GalaxyA = [{img:'A31r.jpg', price : '500$', color : 'Red', type : 'Galaxy A3
 {img:'A21b.jpg', price : '2400$', color : 'Blue', type : 'Galaxy A21'}
 ]
 let GalaxyS = [{img:'S10r.jpg', price : '1500$', color : 'Red', type : 'Galaxy S10'},
-{img:'S10w', price : '1500$', color : 'White', type : 'Galaxy S10'},
+{img:'S10w.jpg', price : '1500$', color : 'White', type : 'Galaxy S10'},
 {img:'S10b.jpg', price : '1500$', color : 'Blue', type : 'Galaxy S10'},
 {img:'S20b.jpg', price : '1600$', color : 'Blue', type : 'Galaxy S20'},
-{img:'S20w', price : '1600$', color : 'White', type : 'Galaxy S20'},
+{img:'S20w.jpg', price : '1600$', color : 'White', type : 'Galaxy S20'},
 {img:'S20r.jpg', price : '1600$', color : 'Red', type : 'Galaxy S20'},
 {img:'S21w.jpg', price : '1800$', color : 'White', type : 'Galaxy S21'},
 {img:'S21b.jpg', price : '1800$', color : 'Blue', type : 'Galaxy S21'},
-{img:'S21r.webp.jpg', price : '1800$', color : 'Red', type : 'Galaxy S21'}
+{img:'S21r.webp', price : '1800$', color : 'Red', type : 'Galaxy S21'}
 ]
 let GalaxyFold = [{img:'Fr.jpg', price : '1800$', color : 'Red', type : 'Galaxy Fold'},
 {img:'Fw.jpg', price : '1800$', color : 'White', type : 'Galaxy Fold'},
 {img:'Fb.jpg', price : '1800$', color : 'Blue', type : 'Galaxy Fold'},
-{img:'online-1617947180.jpg', price : '1950$', color : 'Blue', type : 'Galaxy Fold 2'},
-{img:'online-1617947180.jpg', price : '1950$', color : 'Red', type : 'Galaxy Fold 2'},
-{img:'online-1617947180.jpg', price : '1950$', color : 'White', type : 'Galaxy Fold 2'},
-{img:'e-commerce.jpg', price : '2000$', color : 'White', type : 'Galaxy Z Flip'},
-{img:'e-commerce.jpg', price : '2000$', color : 'Red', type : 'Galaxy Z Flip'},
-{img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Z Flip'}
+{img:'F2b.jpg', price : '1950$', color : 'Blue', type : 'Galaxy Fold 2'},
+{img:'F2r.jpg', price : '1950$', color : 'Red', type : 'Galaxy Fold 2'},
+{img:'F2w.jpg', price : '1950$', color : 'White', type : 'Galaxy Fold 2'},
+{img:'Zw.png', price : '2000$', color : 'White', type : 'Galaxy Z Flip'},
+{img:'Zr.jpg', price : '2000$', color : 'Red', type : 'Galaxy Z Flip'},
+{img:'Zb.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Z Flip'}
 ]
-let GalaxyTabA = [{img:'e-commerce.jpg', price : '1200$', color : 'Red', type : 'Galaxy Tab A7 LTE'},
-{img:'e-commerce.jpg', price : '1200$', color : 'Blue', type : 'Galaxy Tab A7 LTE'},
-{img:'e-commerce.jpg', price : '1200$', color : 'White', type : 'Galaxy Tab A7 LTE'},
-{img:'e-commerce.jpg', price : '1250$', color : 'Red', type : 'Galaxy Tab A7 Lite'},
-{img:'e-commerce.jpg', price : '1250$', color : 'Blue', type : 'Galaxy Tab A7 Lite'},
-{img:'e-commerce.jpg', price : '1250$', color : 'White', type : 'Galaxy Tab A7 Lite'},
-{img:'e-commerce.jpg', price : '1300$', color : 'Red', type : 'Galaxy Tab A2019 LTE'},
-{img:'e-commerce.jpg', price : '1300$', color : 'Blue', type : 'Galaxy Tab A2019 LTE'},
-{img:'e-commerce.jpg', price : '1300$', color : 'White', type : 'Galaxy Tab A2019 LTE'},
-{img:'e-commerce.jpg', price : '1350$', color : 'Red', type : 'Galaxy Tab Active3 LTE'}]
-let GalaxyTabS = [{img:'e-commerce.jpg', price : '1900$', color : 'Blue', type : 'Galaxy Tab S7 FE LTE'},
-{img:'e-commerce.jpg', price : '1950$', color : 'White', type : 'Galaxy Tab S7+'},
-{img:'e-commerce.jpg', price : '1950$', color : 'Red', type : 'Galaxy Tab S7+'},
-{img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7+ LTE'},
-{img:'e-commerce.jpg', price : '1400$', color : 'White', type : 'Galaxy Tab S6  Lite'}]
+let GalaxyTabA = [{img:'A7.jpg', price : '1200$', color : 'Red', type : 'Galaxy Tab A7 LTE'},
+{img:'A7.jpg', price : '1200$', color : 'Blue', type : 'Galaxy Tab A7 LTE'},
+{img:'A7.jpg', price : '1200$', color : 'White', type : 'Galaxy Tab A7 LTE'},
+{img:'A7lite.jpg', price : '1250$', color : 'Red', type : 'Galaxy Tab A7 Lite'},
+{img:'A7lite.jpg', price : '1250$', color : 'Blue', type : 'Galaxy Tab A7 Lite'},
+{img:'A7lite.jpg', price : '1250$', color : 'White', type : 'Galaxy Tab A7 Lite'},
+{img:'2019.jpg', price : '1300$', color : 'Red', type : 'Galaxy Tab A2019 LTE'},
+{img:'2019.jpg', price : '1300$', color : 'Blue', type : 'Galaxy Tab A2019 LTE'},
+{img:'2019.jpg', price : '1300$', color : 'White', type : 'Galaxy Tab A2019 LTE'},
+{img:'A3.jpg', price : '1350$', color : 'Red', type : 'Galaxy Tab Active3 LTE'}]
+let GalaxyTabS = [{img:'S7fe.jpg', price : '1900$', color : 'Blue', type : 'Galaxy Tab S7 FE LTE'},
+{img:'S7+.jpg', price : '1950$', color : 'White', type : 'Galaxy Tab S7+'},
+{img:'S7+.jpg', price : '1950$', color : 'Red', type : 'Galaxy Tab S7+'},
+{img:'S7+.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7+'},
+{img:'S6.jpg', price : '1400$', color : 'White', type : 'Galaxy Tab S6  Lite'}]
 
 let products =  [...GalaxyA,...GalaxyS,...GalaxyFold, ...GalaxyTabA, ...GalaxyTabS]
 let busquet = []

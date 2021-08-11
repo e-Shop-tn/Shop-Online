@@ -50,4 +50,11 @@ video{
 #filteredd{
     margin:10px !important;
 }
+#icon{
+    width: 15px !important;
+    height: 15px !important;
+}
+#basket{
+    border-color: white !important;
+}
 
