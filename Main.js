@@ -47,8 +47,10 @@ let GalaxyTabS = [{img:'e-commerce.jpg', price : '1900$', color : 'Blue', type :
 {img:'e-commerce.jpg', price : '1950$', color : 'Red', type : 'Galaxy Tab S7+'},
 {img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7 LTE'},
 {img:'e-commerce.jpg', price : '1400$', color : 'White', type : 'Galaxy Tab S6  Lite'}]
+
 let products =  [...GalaxyA,...GalaxyS,...GalaxyFold, ...GalaxyTabA, ...GalaxyTabS]
 let busquet = []
+
 
 let countA = 0
 let countB = 0
