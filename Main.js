@@ -48,6 +48,9 @@ let GalaxyTabS = [{img:'e-commerce.jpg', price : '1900$', color : 'Blue', type :
 {img:'e-commerce.jpg', price : '2000$', color : 'Blue', type : 'Galaxy Tab S7+ LTE'},
 {img:'e-commerce.jpg', price : '1400$', color : 'White', type : 'Galaxy Tab S6  Lite'}]
 
+let products =  [...GalaxyA,...GalaxyS,...GalaxyFold, ...GalaxyTabA, ...GalaxyTabS]
+let busquet = []
+
 
 let countA = 0
 let countB = 0
@@ -57,13 +60,19 @@ let countE = 0
 
 
 let addCard = function(obj){
+  
     let type = $('<h5 class="card-title">' + obj.type + '</h5>')
     let color = $('<p class="card-text">color:'+  obj.color  + '</p>')
     let price = $('<p class="card-text">price:' + obj.price + '</p>')
     let cardBody = $('<div class="card-body"></div>')
+    buttondiv = $('<div class="d-grid gap-2"></div>')
+    button = $('<button class="btn btn-primary busquet" type="button"  id="'+ products.indexOf(obj) + '">AddToBusquet</button>')
+    buttondiv[0].appendChild(button[0])
+  
     cardBody[0].appendChild(type[0])
     cardBody[0].appendChild(color[0])
     cardBody[0].appendChild(price[0])
+    cardBody[0].appendChild(buttondiv[0])
     let img = $('<img src="img/' + obj.img  + '" class="card-img-top" alt="...">')
     let container = $('<div class="card card0" style="width: 18rem;"></div>')
     container[0].appendChild(img[0])
@@ -72,6 +81,15 @@ let addCard = function(obj){
     return container
 }
 
+let listener = function(){
+  let addBusquet = $('.busquet')
+  let arrAddBusquet = Array.from(addBusquet)
+  arrAddBusquet.forEach(e=> e.addEventListener('click', function(e){
+    var i = e.target.id 
+    busquet.push(products[i])
+}, { once: true }))
+
+}
 
 $('#A').click(function(){
     let arr = GalaxyA
@@ -83,6 +101,7 @@ $('#A').click(function(){
         countA++
       }
     }
+    listener()
     console.log($('#GalaxyAA'))
     $('#GalaxyBB').hide()
     $('#GalaxyCC').hide()
@@ -102,7 +121,8 @@ $('#B').click(function(){
           $('#GalaxyBB')[0].appendChild(div[0])
           countB++
         }
-    }       
+    }     
+    listener()  
     $('#GalaxyAA').hide()
     $('#GalaxyCC').hide()
     $('#GalaxyTabSS').hide()
@@ -122,6 +142,7 @@ $('#C').click(function(){
           countC++
         }
     }      
+    listener()
     $('#GalaxyAA').hide()
     $('#GalaxyBB').hide()
     $('#GalaxyTabSS').hide()
@@ -142,6 +163,7 @@ $('#D').click(function(){
       countD++
     }
   }
+  listener()
   $('#GalaxyBB').hide()
   $('#GalaxyCC').hide()
   $('#GalaxyTabSS').hide()
@@ -163,6 +185,7 @@ $('#E').click(function(){
       countE++
     }
   }
+  listener()
   $('#GalaxyBB').hide()
   $('#GalaxyCC').hide()
   $('#GalaxyTabSS').show()
@@ -261,6 +284,7 @@ $('#FILTER').click(function(){
       var div = addCard(arr[i])
       $('#filteredd')[0].appendChild(div[0])
     }
+  listener()
   
   $('#GalaxyBB').hide()
   $('#GalaxyCC').hide()
@@ -288,7 +312,19 @@ $('#Tablets').click(function(){
 
 
 
+$('#basket').click(function(){
+  var div = $('<div></div>')
+  var total = 0
+  for(var i = 0; i<busquet.length;i++ ){
+    var p = $('<p>Type: ' + busquet[i].type + '     ' + 'price: ' + busquet[i].price )
+    total += busquet[i].price 
+    div[0].appendChild(p[0])
+  }
+  div[0].appendChild('<p>Total:' + total + '</p>')
+  div[0].appendChild('<button>confirm</button>')
+  $('#Menu').hide()
 
+})
 
 
 
