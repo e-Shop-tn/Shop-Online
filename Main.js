@@ -323,24 +323,96 @@ $('#Tablets').click(function(){
 
 $('#basket').click(function(){
   if(busquet.length !== 0){
-
-    var div = $('<div class="container-fluid di"></div>')
-
+    var div1 = $('<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1"></div>')
+    var div2 = $('<div class="modal-dialog modal-dialog-centered"></div>')
+    var div3 = $('<div class="modal-content">')
+    var div41 = $('<div class="modal-header"></div>')
+    var div42 = $('<div class="modal-body"></div>')
+    var h5 = $('<h5 class="modal-title" id="exampleModalToggleLabel">Your basket</h5>')
+    var button123 = $('<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>')
   var total = 0
   for(var i=0; i<busquet.length;i++){
     var p = $('<p>Type: ' + busquet[i].type + '     price:' + busquet[i].price + '</p>')
-    div[0].appendChild(p[0])
+    div42[0].appendChild(p[0])
     total += 1
   }
-  var but = $('<button class="btn">confirm</button>')
-  var tot = $('<p>Total: ' + total + ' .</p>')
-  div[0].appendChild(tot[0])
-  div[0].appendChild(but[0])
-
-  $('#bought')[0].appendChild(div[0])
+  div41[0].appendChild(h5[0])
+  div41[0].appendChild(button123[0])
+  div3[0].appendChild(div41[0])
+  div3[0].appendChild(div42[0])
+  div2[0].appendChild(div3[0])
+  div1[0].appendChild(div2[0])
+  $('#bought')[0].appendChild(div1[0])
   $('#bought').removeClass('hide')
   $('#phoneList').hide()
-  }
+
+  // var di1 = $('<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1"></div>')
+  // var di2 = $('<div class="modal-dialog modal-dialog-centered"></div>')
+  // var di3 = $('<div class="modal-content container"></div>')
+  // var di41 = $('<div class="modal-header row"></div>')
+  // var di42 = $('<div class="modal-body"></div>')
+  // var di43 = $('<div class="modal-footer"></div>')
+  // var di51 = $('<div class="form-floating  row"></div>')
+  // var di52 = $('<div class="form-floating row"></div>')
+  // var di53 = $('<div class="form-floating row"></div>')
+  // var di54 = $('<div class="form-floating row"></div>')
+  // var di55 = $('<div class="form-floating row">')
+  // var dih5 = $('<h5 class="modal-title" id="exampleModalToggleLabel2">Purshase</h5>')
+  // var input51 = $('<input type="email" class="form-control" id="floatingInput" placeholder="Name LastName" >')
+  // var input52 = $('<input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">')
+  // var input53 = $('<input type="password" class="form-control" id="floatingPassword" placeholder="Adress">')
+  // var input54 = $('<input type="password" class="form-control" id="float" placeholder="99 999 999">')
+  // var input55 = $('<input type="email" class="form-control" id="floatingInput3" placeholder="123456789">')
+  // var label51 = $('<label for="floatingInput">Full Name</label>')
+  // var label52 = $('<label for="floatingInput2">Email</label>')
+  // var label53 = $('<label for="floatingPassword">Adress</label>')
+  // var label54 = $('<label for="floatingPassword">Phone Number</label>')
+  // var label55 = $('<label for="floatingInput3">Card Number</label>')
+  // var but5 = $('<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>')
+  // var but43 = $('<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Pay</button>')
+  // di51[0].appendChild(input51[0])
+  // di52[0].appendChild(input52[0])
+  // di53[0].appendChild(input53[0])
+  // di54[0].appendChild(input54[0])
+  // di55[0].appendChild(input55[0])
+  // di51[0].appendChild(label51[0])
+  // di52[0].appendChild(label52[0])
+  // di53[0].appendChild(label53[0])
+  // di54[0].appendChild(label54[0])
+  // di55[0].appendChild(label55[0])
+  
+  // di41[0].appendChild(di51[0])
+  // di41[0].appendChild(di52[0])
+  // di41[0].appendChild(di53[0])
+  // di41[0].appendChild(di54[0])
+  // di41[0].appendChild(di55[0])
+  // di41[0].appendChild(dih5[0])
+  // di41[0].appendChild(but5[0])
+  // di43[0].appendChild(but43[0])
+
+
+  // di3[0].appendChild(di41[0])
+  // di3[0].appendChild(di42[0])
+  // di3[0].appendChild(di43[0])
+
+  // di2[0].appendChild(div3[0])
+  // di1[0].appendChild(div2[0])
+
+  // // div1[0].appendChild(di1[0])
+  // var a = $('<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>')
+ 
+
+
+
+
+
+
+
+
+
+
+
+}
 })
 
 
