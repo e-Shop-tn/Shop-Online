@@ -1,5 +1,5 @@
 
-
+$('.about-us').hide();
 const carrosel = $('#carouselExampleControls')
 
 let GalaxyA = [{img:'A31r.jpg', price : '500$', color : 'Red', type : 'Galaxy A31'},
@@ -111,6 +111,8 @@ $('#A').click(function(){
     $('#GalaxyTabAA').hide()
     $('#filteredd').hide()
     $('#GalaxyAA').show()
+    $(".about-us").hide()
+
     carrosel.hide()
 })
 
@@ -131,6 +133,7 @@ $('#B').click(function(){
     $('#GalaxyTabAA').hide()
     $('#filteredd').hide()
     $('#GalaxyBB').show()
+    $(".about-us").hide()
     carrosel.hide()
 })
 
@@ -151,6 +154,7 @@ $('#C').click(function(){
     $('#GalaxyTabAA').hide()
     $('#filteredd').hide()
     $('#GalaxyCC').show()
+    $(".about-us").hide()
     carrosel.hide()
 })
 
@@ -172,6 +176,7 @@ $('#D').click(function(){
   $('#GalaxyAA').hide()
   $('#filteredd').hide()
   $('#GalaxyTabAA').show()
+  $(".about-us").hide()
   carrosel.hide()
 })
 
@@ -194,6 +199,7 @@ $('#E').click(function(){
   $('#GalaxyTabAA').hide()
   $('#filteredd').hide()
   $('#GalaxyAA').hide()
+  $(".about-us").hide()
   carrosel.hide()
 })
 
@@ -295,6 +301,7 @@ $('#FILTER').click(function(){
   $('#GalaxyTabAA').hide()
   $('#filteredd').show()
   $('#GalaxyAA').hide()
+  $(".about-us").hide()
   carrosel.hide()
 })
 
@@ -412,7 +419,13 @@ $('#basket').click(function(){
 
 
 
+$(".About-us").on("click",function(){
+  $(".about-us").show()
+  $("#carouselExampleControls").hide()
+})
 
-
+$('#refresh').click(function(){
+  location.reload();
+})
 
 
