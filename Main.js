@@ -68,7 +68,7 @@ let addCard = function(obj){
     buttondiv = $('<div class="d-grid gap-2"></div>')
     button = $('<button class="btn btn-primary busquet" type="button"  id="'+ products.indexOf(obj) + '">AddToBusquet</button>')
     buttondiv[0].appendChild(button[0])
-  
+ 
     cardBody[0].appendChild(type[0])
     cardBody[0].appendChild(color[0])
     cardBody[0].appendChild(price[0])
@@ -93,7 +93,7 @@ let listener = function(){
 
 $('#A').click(function(){
     let arr = GalaxyA
-    console.log('hee')
+    
     if(countA !== arr.length){
       for(var i=0; i< arr.length; i++ ){
         var div = addCard(arr[i])
@@ -102,7 +102,7 @@ $('#A').click(function(){
       }
     }
     listener()
-    console.log($('#GalaxyAA'))
+   
     $('#GalaxyBB').hide()
     $('#GalaxyCC').hide()
     $('#GalaxyTabSS').hide()
@@ -176,7 +176,7 @@ $('#D').click(function(){
 
 
 $('#E').click(function(){
-  let arr = GalaxyA
+  let arr = GalaxyTabS
   
   if(countE !== arr.length){
     for(var i=0; i< arr.length; i++ ){
@@ -278,7 +278,7 @@ let arrayFiltered = function(){
 
 $('#FILTER').click(function(){
   let arr = arrayFiltered()
-  console.log(arr)
+  
   $('#filteredd').html('')
     for(var i=0; i< arr.length; i++ ){
       var div = addCard(arr[i])
@@ -312,19 +312,8 @@ $('#Tablets').click(function(){
 
 
 
-$('#basket').click(function(){
-  var div = $('<div></div>')
-  var total = 0
-  for(var i = 0; i<busquet.length;i++ ){
-    var p = $('<p>Type: ' + busquet[i].type + '     ' + 'price: ' + busquet[i].price )
-    total += busquet[i].price 
-    div[0].appendChild(p[0])
-  }
-  div[0].appendChild('<p>Total:' + total + '</p>')
-  div[0].appendChild('<button>confirm</button>')
-  $('#Menu').hide()
 
-})
+
 
 
 
